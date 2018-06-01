@@ -1,9 +1,11 @@
 package main.menu;
 
+import main.SystemComponent;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Menu {
+public class Menu extends SystemComponent {
 
     protected Menu parent;
     private String name;

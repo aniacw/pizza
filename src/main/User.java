@@ -2,7 +2,7 @@ package main;
 
 import java.util.List;
 
-public class User {
+public class User extends SystemComponent {
     private String fullName;
     private String login;
     private String password;
@@ -26,16 +26,6 @@ public class User {
     public boolean verifyPassword(String password){
         return this.password.equals(password);
     }
-
-
-    public void displayNotification(){
-
-    }
-
-    public void sendNotification(String otherUserLogin){
-
-    }
-
 
     public void addMessage(Message m){
         messages.add(m);

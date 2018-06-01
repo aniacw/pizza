@@ -14,15 +14,17 @@ public class SendMessageMenu extends Menu {
 
     @Override
     public Menu process() {
-        try{
+        try {
+            System.out.println("Please type the receiver's login");
             Scanner scanner = new Scanner(System.in);
             String login = scanner.next();
-            User user = system.findUserByLogin(login);
+            User user = system.getDataBase().findUserByLogin(login); //dlaczego skoro jest wszedzie ref na system nie moze byc system.findUserByLogin()??
             user.addMessage(new Message());
             return parent;
         }
         catch (UserNotFoundException e){
             e.printStackTrace();
         }
+        return parent;
     }
 }

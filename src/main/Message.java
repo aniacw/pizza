@@ -2,13 +2,13 @@ package main;
 
 import java.util.Date;
 
-public class Message {
-    private String sender;
+public class Message extends SystemComponent {
+    private User sender;
     private String message;
     private Date date;
 
     public Message() {
-        this.sender =  ;
+        this.sender = system.getLoggedUser();
         this.message = null;
         this.date = date;
     }

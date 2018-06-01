@@ -1,6 +1,6 @@
 package main;
 
-public class Order {
+public class Order extends SystemComponent {
 
     private static int lastId = 0;
     private int id;
@@ -11,5 +11,13 @@ public class Order {
         this.id = lastId++;
         this.pizza = pizza;
         this.customer = customer;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void editPizza(){
+
     }
 }

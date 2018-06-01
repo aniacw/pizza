@@ -1,8 +1,6 @@
 package main;
 
-import main.menu.AddRemoveUserMenu;
-import main.menu.Menu;
-import main.menu.ModifyUderMenu;
+import main.menu.*;
 
 public class Admin extends User {
 
@@ -12,6 +10,9 @@ public class Admin extends User {
     private static final Menu ADMIN_MENU =
             new Menu("admin menu",
                     new AddRemoveUserMenu(),
+                    new ModifyUderMenu(),
+                    new SendMessageMenu(),
+                    new ChangeUserAccessMenu(),
                     new ModifyUderMenu()
 
             );
@@ -21,8 +22,5 @@ public class Admin extends User {
         this.menu = ADMIN_MENU;
         this.hasAdminRights = true;
     }
-
-
-
 
 }
