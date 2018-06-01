@@ -18,6 +18,10 @@ public class PizzaSystem {
         dataBase.setSystem(this);
     }
 
+    public User getLoggedUser() {
+        return loggedUser;
+    }
+
     public void logIn(String login, String password){ //to dalam na poczatku w User
         for (User u : users) {
             if (u.getLogin().equals(login) && u.verifyPassword(password)) {

@@ -21,8 +21,6 @@ public class Menu {
             System.out.println(menuNumber + ". " + name);
             menuNumber++;
         }
-
-
     }
 
     public Menu process(){

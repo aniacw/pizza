@@ -7,6 +7,12 @@ public class Message {
     private String message;
     private Date date;
 
+    public Message() {
+        this.sender =  ;
+        this.message = null;
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "main.Message{" +

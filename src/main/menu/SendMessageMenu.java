@@ -8,21 +8,21 @@ import java.util.Scanner;
 
 public class SendMessageMenu extends Menu {
 
-    public SendMessageMenu(String name) {
+    public SendMessageMenu() {
         super("Send message");
     }
 
-//    @Override
-//    public Menu process() {
-//        try{
-//            Scanner scanner = new Scanner(System.in);
-//            String login = scanner.next();
-//            User user = pranetApp.findUserByLogin(login);
-//            user.addMessage(new Message());
-//            return parent;
-//        }
-//        catch (UserNotFoundException e){
-//            e.printStackTrace();
-//        }
-//    }
+    @Override
+    public Menu process() {
+        try{
+            Scanner scanner = new Scanner(System.in);
+            String login = scanner.next();
+            User user = system.findUserByLogin(login);
+            user.addMessage(new Message());
+            return parent;
+        }
+        catch (UserNotFoundException e){
+            e.printStackTrace();
+        }
+    }
 }
