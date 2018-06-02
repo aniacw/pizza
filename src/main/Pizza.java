@@ -17,9 +17,7 @@ public class Pizza {
         this.takeAway = false;
     }
 
-    public void preparePizza(){
-        System.out.println("main.Pizza prepared");
-    }
+
 
 
 

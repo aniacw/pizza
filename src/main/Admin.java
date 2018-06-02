@@ -13,7 +13,11 @@ public class Admin extends User {
                     new ModifyUderMenu(),
                     new SendMessageMenu(),
                     new ChangeUserAccessMenu(),
-                    new ModifyUderMenu()
+                    new ModifyUderMenu(),
+                    new CreateAccountMenu(),
+                    new CreateOrderMenu(),
+                    new ExecuteOrderMenu(),
+                    new ChangePasswordMenu()
 
             );
 

@@ -14,7 +14,7 @@ public class ModifyOrderMenu extends Menu {
             Scanner in = new Scanner(System.in);
             int orderId = in.nextInt();
             system.getDataBase().findOrderById(orderId);
-
+            displayMenu();
         } catch (Exception e) {
             e.printStackTrace();
         }

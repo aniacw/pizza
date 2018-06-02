@@ -1,9 +1,6 @@
 package main;
 
-import main.menu.CreateAccountMenu;
-import main.menu.CreateOrderMenu;
-import main.menu.Menu;
-import main.menu.SendMessageMenu;
+import main.menu.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +16,10 @@ public class Customer extends User {
             new Menu("main",
                     new CreateOrderMenu(),
                     new CreateAccountMenu(),
-                    new SendMessageMenu()
+                    new SendMessageMenu(),
+                    new DeleteOrderMenu(),
+                    new EditContactDataMenu(),
+                    new ChangePasswordMenu()
             );
 
     public Customer(String login, String password) {
