@@ -30,16 +30,19 @@ public class Customer extends User {
         this.hasAdminRights = false;
     }
 
-    public void setHasAdminRights(boolean hasAdminRights) {
-        this.hasAdminRights = hasAdminRights;
-    }
-
-    public boolean isHasAdminRights() {
-        return hasAdminRights;
-    }
-
     public void makeOrder(){
 
+    }
+
+    public void makeAdmin(User user){
+        this.hasAdminRights = true;
+    }
+
+    public void changePhone(Integer newNumber){
+        this.phone = newNumber;  // czy setter?
+    }
+    public Customer getLoggedCustomer(){
+        return this; ///???
     }
 
 }

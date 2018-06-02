@@ -12,7 +12,7 @@ public class AddRemoveUserMenu extends Menu {
 
     @Override
     public Menu process() {
-        System.out.println("If you'd like to add user, type 'add'. \n If you'd like to remove user, type 'remove");
+        System.out.println("If you'd like to add user, type 'add'. \n If you'd like to remove user, type 'remove'");
         Scanner in = new Scanner(System.in);
         if (in.next().equals("add")) {
             System.out.println("Please type the new login");

@@ -12,7 +12,7 @@ public class PizzaSystem {
     private Menu menu;
     private DataBase dataBase;
 
-    public PizzaSystem(){
+    public PizzaSystem() {
         this.dataBase = new DataBase();
         this.loggedUser = null;
         this.users = new ArrayList<>();
@@ -27,7 +27,7 @@ public class PizzaSystem {
         return dataBase;
     }
 
-    public void logIn(String login, String password){ //to dalam na poczatku w User
+    public void logIn(String login, String password) { //to dalam na poczatku w User
         for (User u : users) {
             if (u.getLogin().equals(login) && u.verifyPassword(password)) {
                 System.out.println("user logged in");
@@ -37,15 +37,15 @@ public class PizzaSystem {
         }
     }
 
-    public void logOut(){ //to dalam na poczatku w User
+    public void logOut() { //to dalam na poczatku w User
         System.out.println("user logged out");
     }
 
-    public void addUser(User user){
+    public void addUser(User user) {
         users.add(user);
     }
 
-    public void removeUser(User user) throws UserNotFoundException{
+    public void removeUser(User user) throws UserNotFoundException {
         users.remove(user);
     }
 

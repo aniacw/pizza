@@ -1,5 +1,6 @@
 package main;
 
+import main.exception.OrderNotFoundException;
 import main.exception.UserNotFoundException;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ public class DataBase extends SystemComponent {
         return u; //??
     }
 
-    public Order findOrderById(int id) throws Exception { //??
+    public Order findOrderById(int id) throws OrderNotFoundException { //??
         for (Order o : orders)
             if (o.getId() == id)
                 System.out.println("ID found");
@@ -48,5 +49,13 @@ public class DataBase extends SystemComponent {
 
     public List<User> getUsers() {
         return users;
+    }
+
+    public List<Customer> getCustomers() {
+        return customers;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
     }
 }

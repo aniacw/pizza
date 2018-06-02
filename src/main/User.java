@@ -30,4 +30,6 @@ public class User extends SystemComponent {
     public void addMessage(Message m){
         messages.add(m);
     }
+
+
 }

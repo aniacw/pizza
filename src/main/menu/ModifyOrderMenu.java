@@ -1,5 +1,7 @@
 package main.menu;
 
+import main.exception.OrderNotFoundException;
+
 import java.util.Scanner;
 
 public class ModifyOrderMenu extends Menu {
@@ -15,7 +17,7 @@ public class ModifyOrderMenu extends Menu {
             int orderId = in.nextInt();
             system.getDataBase().findOrderById(orderId);
             displayMenu();
-        } catch (Exception e) {
+        } catch (OrderNotFoundException e) {
             e.printStackTrace();
         }
         return parent;

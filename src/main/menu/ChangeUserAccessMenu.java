@@ -1,5 +1,8 @@
 package main.menu;
 
+import main.User;
+import main.exception.UserNotFoundException;
+
 import java.util.Scanner;
 
 public class ChangeUserAccessMenu extends Menu {
@@ -9,11 +12,15 @@ public class ChangeUserAccessMenu extends Menu {
 
     @Override
     public Menu process(){
-        System.out.println("Please type login to be changed to admin");
-        Scanner in = new Scanner(System.in);
-        String login = in.next();
-        system.getDataBase().findUserByLogin(login).
+        try {
+            System.out.println("Please type login to be changed to admin");
+            Scanner in = new Scanner(System.in);
+            User userToChange = system.getDataBase().findUserByLogin(in.next());
+            system.getDataBase().
 
-        return parent;
+            return parent;
+        } catch (UserNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
