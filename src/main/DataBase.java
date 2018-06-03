@@ -13,6 +13,7 @@ public class DataBase extends SystemComponent {
     private List<Employee> employees;
     private List<Order> orders;
     private List<Order> archivedOrders;
+    private List<String> toppings;
 
     public DataBase() {
         this.users = new ArrayList<>();
@@ -21,6 +22,7 @@ public class DataBase extends SystemComponent {
         this.employees = new ArrayList<>();
         this.orders = new ArrayList<>();
         this.archivedOrders = new ArrayList<>();
+        this.toppings = new ArrayList<>();
     }
 
     public User findUserByLogin(String login) throws UserNotFoundException {
@@ -57,5 +59,9 @@ public class DataBase extends SystemComponent {
 
     public List<Employee> getEmployees() {
         return employees;
+    }
+
+    public List<String> getToppings() {
+        return toppings;
     }
 }

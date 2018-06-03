@@ -17,7 +17,8 @@ public class Admin extends User {
                     new CreateAccountMenu(),
                     new CreateOrderMenu(),
                     new ExecuteOrderMenu(),
-                    new ChangePasswordMenu()
+                    new ChangePasswordMenu(),
+                    new CancelOrderMenu()
 
             );
 

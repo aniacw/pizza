@@ -17,7 +17,7 @@ public class Customer extends User {
                     new CreateOrderMenu(),
                     new CreateAccountMenu(),
                     new SendMessageMenu(),
-                    new DeleteOrderMenu(),
+                    new CancelOrderMenu(),
                     new EditContactDataMenu(),
                     new ChangePasswordMenu()
             );
