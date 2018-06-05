@@ -17,7 +17,8 @@ public class Order extends SystemComponent {
         return id;
     }
 
-    public void editPizza(){
+    public void editPizza(String newTopping){
+
 
     }
 }

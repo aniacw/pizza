@@ -41,8 +41,8 @@ public class Customer extends User {
     public void changePhone(Integer newNumber){
         this.phone = newNumber;  // czy setter?
     }
-    public Customer getLoggedCustomer(){
-        return this; ///???
-    }
+//    public Customer getLoggedCustomer(){
+//        return this; ///???
+//    }
 
 }

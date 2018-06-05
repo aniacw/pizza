@@ -3,18 +3,23 @@ package main.menu;
 import java.util.Scanner;
 
 public class ChangePasswordMenu extends Menu {
-    public ChangePasswordMenu(){
+    public ChangePasswordMenu() {
         super("change password menu");
     }
 
     @Override
-    public Menu process(){
+    public Menu process() {
         System.out.println("Please type your old password:");
         Scanner scanner = new Scanner(System.in);
         String oldPassword = scanner.next();
         System.out.println("Please type new password");
         String newPassword = scanner.next();
-        system.getLoggedUser().changePassword(oldPassword, newPassword);
+
+        try {
+            system.getLoggedUser().changePassword(oldPassword, newPassword);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return parent;
     }
 }

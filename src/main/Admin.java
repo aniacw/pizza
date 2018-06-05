@@ -9,7 +9,8 @@ public class Admin extends User {
 
     private static final Menu ADMIN_MENU =
             new Menu("admin menu",
-                    new AddRemoveUserMenu(),
+                    new AddUserMenu(),
+                    new RemoveUserMenu(),
                     new ModifyUderMenu(),
                     new SendMessageMenu(),
                     new ChangeUserAccessMenu(),

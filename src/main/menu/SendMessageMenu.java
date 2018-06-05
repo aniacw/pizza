@@ -18,11 +18,10 @@ public class SendMessageMenu extends Menu {
             System.out.println("Please type the receiver's login");
             Scanner scanner = new Scanner(System.in);
             String login = scanner.next();
-            User user = system.getDataBase().findUserByLogin(login); //dlaczego skoro jest wszedzie ref na system nie moze byc system.findUserByLogin()??
+            User user = system.findUserByLogin(login);
             user.addMessage(new Message());
             return parent;
-        }
-        catch (UserNotFoundException e){
+        } catch (UserNotFoundException e) {
             e.printStackTrace();
         }
         return parent;

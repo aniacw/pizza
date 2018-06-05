@@ -12,6 +12,6 @@ public class EditContactDataMenu extends Menu {
         System.out.println("Please type new phone number");
         Scanner scanner = new Scanner(System.in);
         Integer newPhone = scanner.nextInt();
-        system.g
+        system.getLoggedUser().
     }
 }

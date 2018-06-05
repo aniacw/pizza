@@ -18,7 +18,15 @@ public class User extends SystemComponent {
         return login;
     }
 
-    public void changePassword(String oldPassword, String newPassword){
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void changePassword(String oldPassword, String newPassword) throws Exception{
         if (verifyPassword(oldPassword))
             password = newPassword;
     }

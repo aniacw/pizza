@@ -21,4 +21,7 @@ public class Pizza extends SystemComponent {
 
     }
 
+    public List<String> getToppings() {
+        return toppings;
+    }
 }

@@ -27,6 +27,21 @@ public class PizzaSystem {
         return dataBase;
     }
 
+    User u;
+    public User findUserByLogin(String login) throws UserNotFoundException {
+        for (User u : users)
+            if (u.getLogin().equals(login))
+                System.out.println("login OK");
+            else {
+                System.out.println("invalid login, try again");
+            }
+            return u;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
     public void logIn(String login, String password) { //to dalam na poczatku w User
         for (User u : users) {
             if (u.getLogin().equals(login) && u.verifyPassword(password)) {
