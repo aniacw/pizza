@@ -23,7 +23,7 @@ public class CreateOrderMenu extends Menu {
         System.out.println("Please select size: standard, medium, large");
         String size = scanner.next();
         Pizza pizza = new Pizza(selectedList, size);
-        Order order = new Order(pizza, system.); //system.getLoggedUser()
+        Order order = new Order(pizza, system.getLoggedUser()); //system.getLoggedUser()
         system.getDataBase().getOrders().add(order);
 
 

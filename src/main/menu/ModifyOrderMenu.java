@@ -9,6 +9,10 @@ public class ModifyOrderMenu extends Menu {
         super("modify order menu");
     }
 
+    public ModifyOrderMenu(String name) {
+        super(name);
+    }
+
     @Override
     public Menu process(){
         try {

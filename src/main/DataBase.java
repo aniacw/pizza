@@ -22,15 +22,13 @@ public class DataBase extends SystemComponent {
         this.toppings = new ArrayList<>();
     }
 
-    Order o;
+
     public Order findOrderById(int id) throws OrderNotFoundException {
         for (Order o : orders)
             if (o.getId() == id)
-                System.out.println("ID found");
-            else {
-                System.out.println("Invalid id, try again");
-            }
-        return o;
+               return o;
+        //return null;
+        throw new OrderNotFoundException(id);
     }
 
     public List<Order> getOrders() {

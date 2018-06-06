@@ -4,10 +4,12 @@ public class Order extends SystemComponent {
 
     private static int lastId = 0;
     private int id;
+    //wiecej pizz
     private Pizza pizza;
-    private Customer customer;
+    private User customer;
+    private float summaryPrice;
 
-    public Order(Pizza pizza, Customer customer) {
+    public Order(Pizza pizza, User customer) {
         this.id = lastId++;
         this.pizza = pizza;
         this.customer = customer;

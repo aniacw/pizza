@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Menu extends SystemComponent {
 
     protected Menu parent;
-    private String name;
+    protected String name;
     private ArrayList<Menu> submenu;
 
     public Menu(String name, Menu... submenu) {
@@ -19,10 +19,11 @@ public class Menu extends SystemComponent {
 
     public void displayMenu() {
         int menuNumber = 1;
-        for (Menu menus : submenu) {
-            System.out.println(menuNumber + ". " + name);
+        for (Menu menu : submenu) {
+            System.out.println(menuNumber + ". " + menu.name);
             menuNumber++;
         }
+        System.out.println("O. BACK");
     }
 
     public Menu process() {

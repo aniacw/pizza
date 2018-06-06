@@ -1,5 +1,7 @@
 package main;
 
+import main.menu.*;
+
 import java.util.List;
 
 public class User extends SystemComponent {
@@ -7,6 +9,56 @@ public class User extends SystemComponent {
     private String login;
     private String password;
     private List<Message> messages;
+    protected Menu menu;
+
+    private static final Menu ADMIN_MENU =
+            new Menu("admin menu",
+                    new AddUserMenu(),
+                    new RemoveUserMenu(),
+                    new ModifyUderMenu(),
+                    new SendMessageMenu(),
+                    new ChangeUserAccessMenu(),
+                    new ModifyUderMenu(),
+                    new CreateAccountMenu(),
+                    new CreateOrderMenu(),
+                    new ExecuteOrderMenu(),
+                    new ChangePasswordMenu(),
+                    new CancelOrderMenu()
+
+            );
+
+    private static final Menu CUSTOMER_MENU =
+            new Menu("main",
+                    new CreateOrderMenu(),
+                    new CreateAccountMenu(),
+                    new SendMessageMenu(),
+                    new CancelOrderMenu(),
+                    new EditContactDataMenu(),
+                    new ChangePasswordMenu()
+            );
+
+    private static final Menu EMPLOYEE_MENU =
+            new Menu("main",
+                    new ExecuteOrderMenu(),
+                    new SendMessageMenu(),
+                    new CheckOrders(),
+                    new ChangePasswordMenu()
+            );
+
+    User createAdmin(String login, String password){
+        User u = new User(login, password);
+        u.setMenu(ADMIN_MENU);
+        return u;
+    }
+
+    public void setAdminRights(){
+        menu = ADMIN_MENU;
+    }
+
+    boolean hasAdminRights(){
+        return menu == ADMIN_MENU;
+    }
+
 
     public User(String login, String password) {
         this.fullName = null;
@@ -39,5 +91,7 @@ public class User extends SystemComponent {
         messages.add(m);
     }
 
-
+    public void setMenu(Menu menu) {
+        this.menu = menu;
+    }
 }

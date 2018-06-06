@@ -12,15 +12,14 @@ public class ChangeUserAccessMenu extends Menu {
 
     @Override
     public Menu process(){
+        System.out.println("Please type login to be changed to admin");
+        Scanner in = new Scanner(System.in);
         try {
-            System.out.println("Please type login to be changed to admin");
-            Scanner in = new Scanner(System.in);
-            User userToChange = system.getDataBase().findUserByLogin(in.next());
-            system.getDataBase().
-
-            return parent;
+            User userToChange = system.findUserByLogin(in.next());
+            userToChange.setAdminRights();
         } catch (UserNotFoundException e) {
             e.printStackTrace();
         }
+        return parent;
     }
 }
