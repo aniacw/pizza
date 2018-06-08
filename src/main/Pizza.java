@@ -14,6 +14,13 @@ public class Pizza extends SystemComponent {
 
     private static HashMap<String, Pizza>
 
+    public Pizza() {
+        this.size = size;
+        this.splitHalf = splitHalf;
+        this.takeAway = takeAway;
+        this.price = price;
+    }
+
     public Pizza(List<String> toppings, String size) {
         this.toppings = new ArrayList<>();
         this.size = size;
@@ -23,6 +30,10 @@ public class Pizza extends SystemComponent {
 
     public String getName() {
         return name;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public void selectToppings(){

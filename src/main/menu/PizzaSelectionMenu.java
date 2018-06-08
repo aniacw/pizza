@@ -1,8 +1,10 @@
 package main.menu;
 
+import main.Order;
 import main.Pizza;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class PizzaSelectionMenu extends Menu {
@@ -41,10 +43,26 @@ public class PizzaSelectionMenu extends Menu {
             return parent;
         if (selectedMenu == pizzas.size() + 1)
             return pizzaCreator;
-        if (selectedMenu - 1 < pizzas.size()){
-            //zamwienie pizzy czyli przypisanie Orderu do usera...
+        if (selectedMenu - 1 < pizzas.size()) {
+            List<Pizza> currentOrder = new ArrayList<>();
+            currentOrder.add(pizzas.get(selectedMenu));
+            Order o = new Order(currentOrder, system.getLoggedUser());
+            System.out.println("Would you like to order another one? Type '1' for yes or '2' for no");
+            if (selectedMenu == 1) {
+                displayMenu();
+                if (selectedMenu == 0)
+                    return parent;
+                if (selectedMenu == pizzas.size() + 1)
+                    return pizzaCreator;
+                if (selectedMenu - 1 < pizzas.size()) {
+                    o.addPizza(pizzas.get(selectedMenu));
+                }
+            }
+            if (selectedMenu == 2)
+                return null;
         }
         else
-            return null;
+        return null;//??
+        return null;
     }
 }

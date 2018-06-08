@@ -1,17 +1,20 @@
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Order extends SystemComponent {
 
     private static int lastId = 0;
     private int id;
     //wiecej pizz
-    private Pizza pizza;
+    private List<Pizza> pizza;
     private User customer;
     private float summaryPrice;
 
-    public Order(Pizza pizza, User customer) {
+    public Order(List<Pizza> pizza, User customer) {
         this.id = lastId++;
-        this.pizza = pizza;
+        this.pizza = new ArrayList<>();
         this.customer = customer;
     }
 
@@ -19,7 +22,19 @@ public class Order extends SystemComponent {
         return id;
     }
 
-    public void editPizza(String newTopping){
+    public void addPizza(Pizza p){
+        pizza.add(p);
+    }
+
+    public List<Pizza> getPizza() {
+        return pizza;
+    }
+
+    public User getCustomer() {
+        return customer;
+    }
+
+    public void editPizza(int newTopping){
 
 
     }

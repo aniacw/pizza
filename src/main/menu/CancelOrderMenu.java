@@ -11,7 +11,7 @@ public class CancelOrderMenu extends Menu {
         super("cancel oder menu");
     }
 
-    private static class Condition implements Predicate<Order>{
+    private static class Condition implements Predicate<Order> {
         private int idToCancel;
 
         public Condition(int idToCancel) {
