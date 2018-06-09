@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ChangePasswordMenu extends Menu {
     public ChangePasswordMenu() {
-        super("change password menu");
+        super("change password");
     }
 
     @Override
@@ -20,6 +20,7 @@ public class ChangePasswordMenu extends Menu {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return parent;
     }
 }

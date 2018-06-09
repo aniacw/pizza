@@ -12,6 +12,7 @@ public class Order extends SystemComponent {
     private User customer;
     private float summaryPrice;
 
+
     public Order(List<Pizza> pizza, User customer) {
         this.id = lastId++;
         this.pizza = new ArrayList<>();
@@ -30,8 +31,8 @@ public class Order extends SystemComponent {
         return pizza;
     }
 
-    public User getCustomer() {
-        return customer;
+    public String getCustomerFullName() {
+        return system.getDataBase().;
     }
 
     public void editPizza(int newTopping){

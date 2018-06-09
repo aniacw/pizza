@@ -36,10 +36,6 @@ public class Pizza extends SystemComponent {
         this.size = size;
     }
 
-    public void selectToppings(){
-
-    }
-
     public List<String> getToppings() {
         return toppings;
     }

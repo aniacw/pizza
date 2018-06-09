@@ -8,7 +8,7 @@ import java.util.function.Predicate;
 
 public class CancelOrderMenu extends Menu {
     public CancelOrderMenu() {
-        super("cancel oder menu");
+        super("cancel oder");
     }
 
     private static class Condition implements Predicate<Order> {

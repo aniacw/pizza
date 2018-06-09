@@ -5,7 +5,7 @@ import main.Order;
 public class ExecuteOrderMenu extends Menu {
 
     public ExecuteOrderMenu() {
-        super("execute order menu");
+        super("execute order");
     }
 
     @Override

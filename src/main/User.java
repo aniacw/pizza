@@ -11,6 +11,9 @@ public class User extends SystemComponent {
     private List<Message> messages;
     protected Menu menu;
 
+    public User() {
+    }
+
     private static final Menu ADMIN_MENU =
             new Menu("admin menu",
                     new AddUserMenu(),
@@ -34,7 +37,6 @@ public class User extends SystemComponent {
     private static final Menu CUSTOMER_MENU =
             new Menu("customer menu",
                     new CreateOrderMenu(),
-                    new CreateAccountMenu(),
                     new SendMessageMenu(),
                     new CancelOrderMenu(),
                     new EditContactDataMenu(),
@@ -57,7 +59,7 @@ public class User extends SystemComponent {
                     new ExecuteOrderMenu()
             );
 
-    User createAdmin(String login, String password) {
+    public User createAdmin(String login, String password) {
         User u = new User(login, password);
         u.setMenu(ADMIN_MENU);
         return u;
@@ -71,18 +73,17 @@ public class User extends SystemComponent {
         return menu == ADMIN_MENU;
     }
 
-    User createCustomer(String login, String password) {
+    public User createCustomer(String login, String password) {
         User u = new User(login, password);
         u.setMenu(CUSTOMER_MENU);
         return u;
     }
 
-    User createEmployee(String login, String password) {
+    public User createEmployee(String login, String password) {
         User u = new User(login, password);
         u.setMenu(EMPLOYEE_MENU);
         return u;
     }
-
 
     public User(String login, String password) {
         this.fullName = null;

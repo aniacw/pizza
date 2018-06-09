@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ModifyUderMenu extends Menu {
 
     public ModifyUderMenu(){
-        super("modify user menu");
+        super("modify user");
     }
 
     @Override

@@ -1,5 +1,7 @@
 package main.menu;
 
+import main.exception.UserNotFoundException;
+
 import java.util.Scanner;
 
 public class CheckOrdersByCustomerMenu extends CheckOrders {
@@ -12,7 +14,12 @@ public class CheckOrdersByCustomerMenu extends CheckOrders {
         System.out.println("Please type the full name of the customer");
         Scanner scanner = new Scanner(System.in);
         String fullName = scanner.next();
-        system.getDataBase().findOrderByCustomer(fullName)
+
+        try {
+            system.getDataBase().findOrderByCustomer(fullName);
+        } catch (UserNotFoundException e) {
+            e.printStackTrace();
+        }
 
         return parent;
     }

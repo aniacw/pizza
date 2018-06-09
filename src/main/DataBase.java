@@ -33,9 +33,9 @@ public class DataBase extends SystemComponent {
         return toppings;
     }
 
-    public Order findOrderByCustomer(User customer) throws UserNotFoundException{
+    public Order findOrderByCustomer(String fullName) throws UserNotFoundException {
         for (Order o : orders)
-            if (o.getCustomer().equals(customer))
+            if (o.getCustomerFullName().equals(fullName))
                 return o;
         throw new UserNotFoundException();
     }

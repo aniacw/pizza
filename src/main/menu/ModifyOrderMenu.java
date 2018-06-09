@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ModifyOrderMenu extends Menu {
     public ModifyOrderMenu() {
-        super("modify order menu");
+        super("modify order");
     }
 
     public ModifyOrderMenu(String name) {

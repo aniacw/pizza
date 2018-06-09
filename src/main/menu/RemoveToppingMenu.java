@@ -1,6 +1,9 @@
 package main.menu;
 
 import main.Order;
+import main.Pizza;
+
+import java.util.Scanner;
 
 public class RemoveToppingMenu extends ModifyOrderMenu {
     public RemoveToppingMenu(){
@@ -10,8 +13,13 @@ public class RemoveToppingMenu extends ModifyOrderMenu {
     @Override
     public Menu process(){
         System.out.println("Here is your order: " + foundOrder);
+        System.out.println("select which pizza to edit");
+        Scanner scanner = new Scanner(System.in);
+        Pizza p = foundOrder.getPizza().get(scanner.nextInt()+1);
         System.out.println("Type what you'd like to remove");
-        for (Order o : foundOrder)
+
+        String toppingToRemove = scanner.next();
+        foundOrder.getPizza().get(scanner.nextInt()+1).
 
         return parent;
     }

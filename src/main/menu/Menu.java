@@ -15,6 +15,13 @@ public class Menu extends SystemComponent {
         this.name = name;
         this.parent = null;
         this.submenu = new ArrayList<>();
+        for (Menu menu : submenu)
+            addSubmenu(menu);
+    }
+
+    public void addSubmenu(Menu menu) {
+        submenu.add(menu);
+        menu.parent = this;
     }
 
     public void displayMenu() {
@@ -37,4 +44,13 @@ public class Menu extends SystemComponent {
         else
             return null;
     }
+
+    public final void run() {
+        Menu current = this;
+        while (current != null)
+            current = current.process();
+    }
+
+
 }
+
