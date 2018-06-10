@@ -119,4 +119,8 @@ public class User extends SystemComponent {
     public void setMenu(Menu menu) {
         this.menu = menu;
     }
+
+    public void showInterface(){
+        menu.run();
+    }
 }

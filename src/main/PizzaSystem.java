@@ -39,7 +39,7 @@ public class PizzaSystem {
         return users;
     }
 
-    public void logIn(String login, String password) { //to dalam na poczatku w User
+    public User logIn(String login, String password) { //to dalam na poczatku w User
         for (User u : users) {
             if (u.getLogin().equals(login) && u.verifyPassword(password)) {
                 System.out.println("user logged in");
@@ -47,6 +47,7 @@ public class PizzaSystem {
                 System.out.println("incorrect credentials");
             }
         }
+        return null;
     }
 
     public void logOut() { //to dalam na poczatku w User

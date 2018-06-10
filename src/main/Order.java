@@ -1,6 +1,7 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Order extends SystemComponent {
@@ -11,12 +12,14 @@ public class Order extends SystemComponent {
     private List<Pizza> pizza;
     private User customer;
     private float summaryPrice;
+    private Date orderDate;
 
 
     public Order(List<Pizza> pizza, User customer) {
         this.id = lastId++;
         this.pizza = new ArrayList<>();
         this.customer = customer;
+        //this.orderDate = toda
     }
 
     public int getId() {

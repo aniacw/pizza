@@ -12,7 +12,7 @@ public class Pizza extends SystemComponent {
     private boolean takeAway;
     private float price;
 
-    private static HashMap<String, Pizza>
+   // private static HashMap<String, Pizza>
 
     public Pizza() {
         this.size = size;
