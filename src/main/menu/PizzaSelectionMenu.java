@@ -57,12 +57,17 @@ public class PizzaSelectionMenu extends Menu {
                 if (selectedMenu - 1 < pizzas.size()) {
                     o.addPizza(pizzas.get(selectedMenu));
                 }
+                return parent;
             }
             if (selectedMenu == 2)
-                return null;
+                return parent;
         }
-        else
-        return null;//??
-        return null;
+
+        return parent;
     }
 }
+//   W PizzaSelectionMenu chodzi o to musi być return zarówno po ifie jak
+//        po else. wewenatrz ifa nie zawsze wychodzimy z funkcji poprawnie więc
+//        zaczęło działać kiedy dorzuciłaś return na samym koncu który wywoła
+//        się jeśli nie wyszliśmy gdziekolwiek wcześniej. Ale poza tym nulla
+//        mieliśmy nie zwracać bo null ma w założeniu wychodzić z programu

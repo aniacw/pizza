@@ -35,7 +35,7 @@ public class Order extends SystemComponent {
     }
 
     public String getCustomerFullName() {
-        return system.getDataBase().;
+        return null;
     }
 
     public void editPizza(int newTopping){

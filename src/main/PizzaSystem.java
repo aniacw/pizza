@@ -43,6 +43,7 @@ public class PizzaSystem {
         for (User u : users) {
             if (u.getLogin().equals(login) && u.verifyPassword(password)) {
                 System.out.println("user logged in");
+                return u;
             } else {
                 System.out.println("incorrect credentials");
             }
@@ -60,6 +61,15 @@ public class PizzaSystem {
 
     public void removeUser(User user) throws UserNotFoundException {
         users.remove(user);
+    }
+
+    public void setMainMenu(Menu mainMenu){
+        this.menu = mainMenu;
+        mainMenu.setSystem(this);
+    }
+
+    public void run(){
+        menu.run();
     }
 
 }

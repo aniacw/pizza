@@ -14,6 +14,12 @@ public class User extends SystemComponent {
     public User() {
     }
 
+    public User(String login, String password) {
+        this.fullName = null;
+        this.login = login;
+        this.password = password;
+    }
+
     private static final Menu ADMIN_MENU =
             new Menu("admin menu",
                     new AddUserMenu(),
@@ -23,25 +29,25 @@ public class User extends SystemComponent {
                     new ChangeUserAccessMenu(),
                     new ModifyUderMenu(),
                     new CreateAccountMenu(),
-                    new CreateOrderMenu(),
-                    new ExecuteOrderMenu(),
+                 //   new CreateOrderMenu(),
+                    //new ExecuteOrderMenu(),
                     new ChangePasswordMenu(),
                     new CancelOrderMenu(),
-                    new ChangeSizeMenu(),
+                  //  new ChangeSizeMenu(),
                     new CheckOrders(),
-                    new EditContactDataMenu(),
+                  //  new EditContactDataMenu(),
                     new PizzaSelectionMenu(),
                     new PizzaCreatorMenu()
             );
 
     private static final Menu CUSTOMER_MENU =
             new Menu("customer menu",
-                    new CreateOrderMenu(),
+                   // new CreateOrderMenu(),
                     new SendMessageMenu(),
                     new CancelOrderMenu(),
-                    new EditContactDataMenu(),
+                  //  new EditContactDataMenu(),
                     new ChangePasswordMenu(),
-                    new ChangeSizeMenu(),
+                  //  new ChangeSizeMenu(),
                     new ModifyOrderMenu(),
                     new PizzaCreatorMenu(),
                     new PizzaSelectionMenu()
@@ -49,14 +55,14 @@ public class User extends SystemComponent {
 
     private static final Menu EMPLOYEE_MENU =
             new Menu("employee menu",
-                    new ExecuteOrderMenu(),
+               //     new ExecuteOrderMenu(),
                     new SendMessageMenu(),
                     new CheckOrders(),
                     new ChangePasswordMenu(),
-                    new CheckOrders(),
-                    new CreateOrderMenu(),
-                    new EditContactDataMenu(),
-                    new ExecuteOrderMenu()
+                    new CheckOrders()
+//                    new CreateOrderMenu(),
+//                    new EditContactDataMenu(),
+//                    new ExecuteOrderMenu()
             );
 
     public User createAdmin(String login, String password) {
@@ -85,11 +91,7 @@ public class User extends SystemComponent {
         return u;
     }
 
-    public User(String login, String password) {
-        this.fullName = null;
-        this.login = login;
-        this.password = password;
-    }
+
 
     public String getLogin() {
         return login;
