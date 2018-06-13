@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-06-13T18:09:49</date>
+  <millis>1528906189990</millis>
+  <sequence>0</sequence>
+  <logger>System logger</logger>
+  <level>INFO</level>
+  <class>main.menu.RemoveUserMenu</class>
+  <method>process</method>
+  <thread>1</thread>
+</record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-06-13T18:14:26</date>
+  <millis>1528906466620</millis>
+  <sequence>0</sequence>
+  <logger>System logger</logger>
+  <level>INFO</level>
+  <class>main.menu.RemoveUserMenu</class>
+  <method>process</method>
+  <thread>1</thread>
+</record>
+<record>
+  <date>2018-06-13T18:14:29</date>
+  <millis>1528906469464</millis>
+  <sequence>1</sequence>
+  <logger>System logger</logger>
+  <level>INFO</level>
+  <class>main.menu.RemoveUserMenu</class>
+  <method>process</method>
+  <thread>1</thread>
+</record>
+Jun 13, 2018 6:19:00 PM main.menu.RemoveUserMenu process
+INFO: null
+Jun 13, 2018 6:23:53 PM main.menu.RemoveUserMenu process
+INFO: User not found
+Jun 13, 2018 6:36:25 PM main.menu.RemoveUserMenu process
+INFO: main.User 'q' not found
+Jun 13, 2018 6:51:36 PM main.Program main
+SEVERE: java.lang.Exception: ERROR
+Jun 13, 2018 6:55:13 PM main.Program main
+SEVERE: java.lang.Exception: ERROR
+	at main.Program.main(Program.java:25)
+
+Jun 13, 2018 7:10:16 PM main.SystemLogger log
+SEVERE: java.lang.Exception: ERROR
+	at main.Program.main(Program.java:19)
+

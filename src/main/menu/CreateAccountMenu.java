@@ -18,16 +18,21 @@ public class CreateAccountMenu extends Menu {
         String pass = scanner.next();
         System.out.println("create customer, employee or admin? Type one");
         String role = scanner.next();
-        User newUser = new User();
+        User user;
         if (role.equalsIgnoreCase("customer")) {
-            newUser.createCustomer(login, pass);
+            user = User.createCustomer(login, pass);
         }
-        if (role.equalsIgnoreCase("employee")){
-            newUser.createEmployee(login, pass);
+        else if (role.equalsIgnoreCase("employee")){
+            user = User.createEmployee(login, pass);
         }
-        if (role.equalsIgnoreCase("admin")){
-            newUser.createAdmin(login, pass);
+        else if (role.equalsIgnoreCase("admin")){
+            user  = User.createAdmin(login, pass);
         }
+        else{
+            System.out.println("Invalid user role");
+            return parent;
+        }
+        system.addUser(user);
         return parent;
     }
 }

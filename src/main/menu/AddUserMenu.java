@@ -16,7 +16,7 @@ public class AddUserMenu extends Menu {
         String newLogin = in.next();
         System.out.println("Please set the password");
         String newPassword = in.next();
-        User newUser = new User(newLogin, newPassword);
+        User newUser = User.createCustomer(newLogin, newPassword);
         system.addUser(newUser);
         return parent;
     }

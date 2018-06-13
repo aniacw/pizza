@@ -11,13 +11,14 @@ public class User extends SystemComponent {
     private List<Message> messages;
     protected Menu menu;
 
-    public User() {
+    private User() {
     }
 
-    public User(String login, String password) {
+    private User(String login, String password, Menu menu) {
         this.fullName = null;
         this.login = login;
         this.password = password;
+        this.menu = menu;
     }
 
     private static final Menu ADMIN_MENU =
@@ -65,10 +66,8 @@ public class User extends SystemComponent {
 //                    new ExecuteOrderMenu()
             );
 
-    public User createAdmin(String login, String password) {
-        User u = new User(login, password);
-        u.setMenu(ADMIN_MENU);
-        return u;
+    public static User createAdmin(String login, String password) {
+        return new User(login, password, ADMIN_MENU);
     }
 
     public void setAdminRights() {
@@ -79,16 +78,12 @@ public class User extends SystemComponent {
         return menu == ADMIN_MENU;
     }
 
-    public User createCustomer(String login, String password) {
-        User u = new User(login, password);
-        u.setMenu(CUSTOMER_MENU);
-        return u;
+    public static User createCustomer(String login, String password) {
+        return new User(login, password, CUSTOMER_MENU);
     }
 
-    public User createEmployee(String login, String password) {
-        User u = new User(login, password);
-        u.setMenu(EMPLOYEE_MENU);
-        return u;
+    public static User createEmployee(String login, String password) {
+        return new User(login, password, EMPLOYEE_MENU);
     }
 
 
@@ -124,5 +119,11 @@ public class User extends SystemComponent {
 
     public void showInterface(){
         menu.run();
+    }
+
+    @Override
+    public void setSystem(PizzaSystem system) {
+        super.setSystem(system);
+        menu.setSystem(system);
     }
 }

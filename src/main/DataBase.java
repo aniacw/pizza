@@ -37,6 +37,6 @@ public class DataBase extends SystemComponent {
         for (Order o : orders)
             if (o.getCustomerFullName().equals(fullName))
                 return o;
-        throw new UserNotFoundException();
+        throw new UserNotFoundException(fullName);
     }
 }

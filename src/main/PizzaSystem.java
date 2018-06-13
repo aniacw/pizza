@@ -3,20 +3,33 @@ package main;
 import main.exception.UserNotFoundException;
 import main.menu.Menu;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Formatter;
 import java.util.List;
+import java.util.logging.*;
 
 public class PizzaSystem {
     private User loggedUser;
     private List<User> users;
     private Menu menu;
     private DataBase dataBase;
+    private SystemLogger logger;
+
+
 
     public PizzaSystem() {
         this.dataBase = new DataBase();
         this.loggedUser = null;
         this.users = new ArrayList<>();
         dataBase.setSystem(this);
+        this.logger = new SystemLogger("pizzasystem.log", true);
+    }
+
+    public SystemLogger getLogger() {
+        return logger;
     }
 
     public User getLoggedUser() {
@@ -32,7 +45,7 @@ public class PizzaSystem {
         for (User u : users)
             if (u.getLogin().equals(login))
             return u;
-        throw new UserNotFoundException();
+        throw new UserNotFoundException(login);
     }
 
     public List<User> getUsers() {
@@ -57,10 +70,18 @@ public class PizzaSystem {
 
     public void addUser(User user) {
         users.add(user);
+        user.setSystem(this);
     }
 
     public void removeUser(User user) throws UserNotFoundException {
-        users.remove(user);
+        if (!users.remove(user))
+            throw new UserNotFoundException(user.getLogin());
+    }
+
+
+    public void removeUserByLogin(String login) throws UserNotFoundException{
+        if (!users.removeIf(u->u.getLogin().equals(login)))
+            throw new UserNotFoundException(login);
     }
 
     public void setMainMenu(Menu mainMenu){

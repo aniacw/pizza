@@ -3,11 +3,20 @@ package main;
 import main.menu.LoginMenu;
 import main.menu.Menu;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Level;
 
 public class Program {
-    public static void main(String[] args){
+
+    //scenebuilder
+
+
+    public static void main(String[] args) {
+        PizzaSystem system = new PizzaSystem();
+        try {
 //        Scanner scanner = new Scanner(System.in);
 //        String line = scanner.nextLine();
 //        String[] numStrings = line.split(" ");
@@ -15,15 +24,18 @@ public class Program {
 //        for (String s : numStrings)
 //            numbers.add(Integer.parseInt(s));
 
-        PizzaSystem system = new PizzaSystem();
 
-    Menu mainMenu = new Menu("Pizza Order System",
-            new LoginMenu()
-    );
+            Menu mainMenu = new Menu("Pizza Order System",
+                    new LoginMenu()
+            );
 
-    system.setMainMenu(mainMenu);
-    system.addUser(new User("Clark", "7777"));
-    system.run();
+            system.setMainMenu(mainMenu);
+            system.addUser(User.createAdmin("Clark", "7777"));
+            system.run();
 
+        }
+        catch(Throwable t){
+            system.getLogger().log(t);
+        }
     }
 }
