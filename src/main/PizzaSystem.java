@@ -18,8 +18,6 @@ public class PizzaSystem {
     private DataBase dataBase;
     private SystemLogger logger;
 
-
-
     public PizzaSystem() {
         this.dataBase = new DataBase();
         this.loggedUser = null;
@@ -40,7 +38,6 @@ public class PizzaSystem {
         return dataBase;
     }
 
-
     public User findUserByLogin(String login) throws UserNotFoundException {
         for (User u : users)
             if (u.getLogin().equals(login))
@@ -52,13 +49,11 @@ public class PizzaSystem {
         return users;
     }
 
-    public User logIn(String login, String password) { //to dalam na poczatku w User
+    public User logIn(String login, String password) {
         for (User u : users) {
             if (u.getLogin().equals(login) && u.verifyPassword(password)) {
                 System.out.println("user logged in");
                 return u;
-            } else {
-                System.out.println("incorrect credentials");
             }
         }
         return null;
@@ -92,5 +87,4 @@ public class PizzaSystem {
     public void run(){
         menu.run();
     }
-
 }

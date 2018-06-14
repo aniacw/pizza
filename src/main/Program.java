@@ -31,6 +31,8 @@ public class Program {
 
             system.setMainMenu(mainMenu);
             system.addUser(User.createAdmin("Clark", "7777"));
+            system.addUser(User.createCustomer("rocky", "8888"));
+            system.addUser(User.createCustomer("mickey", "9999"));
             system.run();
 
         }

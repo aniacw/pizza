@@ -23,7 +23,6 @@ public class User extends SystemComponent {
 
     private static final Menu ADMIN_MENU =
             new Menu("admin menu",
-                    new AddUserMenu(),
                     new RemoveUserMenu(),
                     new ModifyUderMenu(),
                     new SendMessageMenu(),
@@ -85,8 +84,6 @@ public class User extends SystemComponent {
     public static User createEmployee(String login, String password) {
         return new User(login, password, EMPLOYEE_MENU);
     }
-
-
 
     public String getLogin() {
         return login;

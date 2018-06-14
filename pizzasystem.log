@@ -50,3 +50,14 @@ Jun 13, 2018 7:10:16 PM main.SystemLogger log
 SEVERE: java.lang.Exception: ERROR
 	at main.Program.main(Program.java:19)
 
+Jun 14, 2018 8:57:15 PM main.SystemLogger log
+SEVERE: java.util.InputMismatchException
+	at java.util.Scanner.throwFor(Scanner.java:864)
+	at java.util.Scanner.next(Scanner.java:1485)
+	at java.util.Scanner.nextInt(Scanner.java:2117)
+	at java.util.Scanner.nextInt(Scanner.java:2076)
+	at main.menu.Menu.process(Menu.java:40)
+	at main.menu.Menu.run(Menu.java:52)
+	at main.PizzaSystem.run(PizzaSystem.java:93)
+	at main.Program.main(Program.java:34)
+
