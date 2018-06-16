@@ -13,18 +13,20 @@ public class PizzaCreatorMenu extends Menu {
     }
 
     public Menu process() {
-        System.out.println("list of toppings: " + system.getDataBase().getToppings());
+        System.out.println("list of toppings: " + system.getDataBase().getRestaurantMenu().getToppings());
         System.out.println("Type chosen ones:");
         Scanner scanner = new Scanner(System.in);
         String selected = scanner.next();
-        List<String> selectedList = new ArrayList<>();
-        selectedList.add(selected);
+        List<String> selectedToppings = new ArrayList<>();
+        selectedToppings.add(selected);
 
         System.out.println("Please select size: standard, medium, large");
         String size = scanner.next();
-        Pizza pizza = new Pizza(selectedList, size);
+        Pizza pizza = new Pizza(selectedToppings, size);
+
         List<Pizza> p = new ArrayList<>();
         p.add(pizza);
+
         Order order = new Order(p, system.getLoggedUser());
         system.getDataBase().getOrders().add(order);
 

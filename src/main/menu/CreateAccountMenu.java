@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.Order;
 import main.User;
 
 import java.util.Scanner;

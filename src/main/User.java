@@ -27,41 +27,36 @@ public class User extends SystemComponent {
                     new ModifyUderMenu(),
                     new SendMessageMenu(),
                     new ChangeUserAccessMenu(),
-                    new ModifyUderMenu(),
                     new CreateAccountMenu(),
-                 //   new CreateOrderMenu(),
                     //new ExecuteOrderMenu(),
                     new ChangePasswordMenu(),
                     new CancelOrderMenu(),
                   //  new ChangeSizeMenu(),
                     new CheckOrders(),
-                  //  new EditContactDataMenu(),
+                    new EditContactDataMenu(),
                     new PizzaSelectionMenu(),
                     new PizzaCreatorMenu()
             );
 
     private static final Menu CUSTOMER_MENU =
             new Menu("customer menu",
-                   // new CreateOrderMenu(),
                     new SendMessageMenu(),
                     new CancelOrderMenu(),
-                  //  new EditContactDataMenu(),
+                    new EditContactDataMenu(),
                     new ChangePasswordMenu(),
                   //  new ChangeSizeMenu(),
-                    new ModifyOrderMenu(),
+//                    new ModifyOrderMenu(),
                     new PizzaCreatorMenu(),
                     new PizzaSelectionMenu()
             );
 
     private static final Menu EMPLOYEE_MENU =
             new Menu("employee menu",
-               //     new ExecuteOrderMenu(),
                     new SendMessageMenu(),
                     new CheckOrders(),
                     new ChangePasswordMenu(),
-                    new CheckOrders()
-//                    new CreateOrderMenu(),
-//                    new EditContactDataMenu(),
+                    new CheckOrders(),
+                    new EditContactDataMenu()
 //                    new ExecuteOrderMenu()
             );
 
@@ -109,6 +104,8 @@ public class User extends SystemComponent {
     public void addMessage(Message m) {
         messages.add(m);
     }
+
+    public void receiveMessage(){}
 
     public void setMenu(Menu menu) {
         this.menu = menu;

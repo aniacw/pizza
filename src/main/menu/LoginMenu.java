@@ -21,7 +21,6 @@ public class LoginMenu extends Menu {
             System.out.println("Invalid login or password");
         else
             u.showInterface();
-
         return parent;
     }
 }

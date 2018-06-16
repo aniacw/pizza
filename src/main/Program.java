@@ -39,5 +39,7 @@ public class Program {
         catch(Throwable t){
             system.getLogger().log(t);
         }
+
+        system.getDataBase().getRestaurantMenu().showRestaurantMenu();
     }
 }

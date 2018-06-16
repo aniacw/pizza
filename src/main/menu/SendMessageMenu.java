@@ -19,7 +19,9 @@ public class SendMessageMenu extends Menu {
             Scanner scanner = new Scanner(System.in);
             String login = scanner.next();
             User user = system.findUserByLogin(login);
-            user.addMessage(new Message());
+            System.out.println("Please type the message");
+            String msg = scanner.next();
+            user.addMessage(new Message(msg));
             return parent;
         } catch (UserNotFoundException e) {
             e.printStackTrace();

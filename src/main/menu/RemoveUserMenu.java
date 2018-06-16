@@ -18,6 +18,7 @@ public class RemoveUserMenu extends Menu {
             Scanner in = new Scanner(System.in);
             String loginToRemove = in.next();
             system.removeUserByLogin(loginToRemove);
+            System.out.println("User '" + loginToRemove +"' removed");
         } catch (UserNotFoundException e) {
             System.out.println("User not found");
             system.getLogger().log(Level.INFO, e.getMessage());

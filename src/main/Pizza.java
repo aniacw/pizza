@@ -12,7 +12,7 @@ public class Pizza extends SystemComponent {
     private boolean takeAway;
     private float price;
 
-   // private static HashMap<String, Pizza>
+    // private static HashMap<String, Pizza>
 
     public Pizza() {
         this.size = size;
@@ -38,5 +38,11 @@ public class Pizza extends SystemComponent {
 
     public List<String> getToppings() {
         return toppings;
+    }
+
+    public void removeTopping(String t){
+        for (String top : toppings)
+            if (top.equals(t))
+                toppings.remove(top);
     }
 }

@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.Order;
 import main.exception.UserNotFoundException;
 
 import java.util.Scanner;

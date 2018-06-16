@@ -9,12 +9,12 @@ import java.util.List;
 public class DataBase extends SystemComponent {
     private List<Order> orders;
     private List<Order> archivedOrders;
-    private List<String> toppings;
+    private RestaurantMenu restaurantMenu;
 
     public DataBase() {
         this.orders = new ArrayList<>();
         this.archivedOrders = new ArrayList<>();
-        this.toppings = new ArrayList<>();
+        this.restaurantMenu = new RestaurantMenu();
     }
 
     public Order findOrderById(int id) throws OrderNotFoundException {
@@ -29,14 +29,14 @@ public class DataBase extends SystemComponent {
         return orders;
     }
 
-    public List<String> getToppings() {
-        return toppings;
-    }
-
     public Order findOrderByCustomer(String fullName) throws UserNotFoundException {
         for (Order o : orders)
-            if (o.getCustomerFullName().equals(fullName))
+            if (o.getCustomer().getFullName().equals(fullName))
                 return o;
         throw new UserNotFoundException(fullName);
+    }
+
+    public RestaurantMenu getRestaurantMenu() {
+        return restaurantMenu;
     }
 }

@@ -53,6 +53,7 @@ public class PizzaSystem {
         for (User u : users) {
             if (u.getLogin().equals(login) && u.verifyPassword(password)) {
                 System.out.println("user logged in");
+                loggedUser = u;
                 return u;
             }
         }

@@ -34,8 +34,8 @@ public class Order extends SystemComponent {
         return pizza;
     }
 
-    public String getCustomerFullName() {
-        return null;
+    public User getCustomer() {
+        return customer;
     }
 
     public void editPizza(int newTopping){

@@ -61,3 +61,7 @@ SEVERE: java.util.InputMismatchException
 	at main.PizzaSystem.run(PizzaSystem.java:93)
 	at main.Program.main(Program.java:34)
 
+Jun 15, 2018 9:51:18 PM main.menu.RemoveUserMenu process
+INFO: main.User '0' not found
+Jun 15, 2018 10:00:01 PM main.menu.RemoveUserMenu process
+INFO: main.User '0' not found

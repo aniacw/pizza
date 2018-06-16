@@ -1,5 +1,7 @@
 package main.menu;
 
+import main.Order;
+
 import java.util.Scanner;
 
 public class CheckOrders extends Menu {

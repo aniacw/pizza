@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.Order;
 import main.User;
 import main.exception.UserNotFoundException;
 
@@ -17,6 +18,7 @@ public class ChangeUserAccessMenu extends Menu {
         try {
             User userToChange = system.findUserByLogin(in.next());
             userToChange.setAdminRights();
+            System.out.println(userToChange + " is now admin");
         } catch (UserNotFoundException e) {
             e.printStackTrace();
         }

@@ -10,28 +10,31 @@ public class FindOrderMenu extends Menu {
         super("find order");
     }
 
-    public Order foundOrder;
+    protected Order foundOrder;
+    public ModifyOrderMenu modifyOrderMenu;
+
+    public FindOrderMenu(String name) {
+        super(name);
+    }
 
     @Override
     public Menu process() {
         try {
             System.out.println("Please type order id to change");
             Scanner in = new Scanner(System.in);
-            int orderIdToModify = in.nextInt();
-            foundOrder = system.getDataBase().findOrderById(orderIdToModify);
+            foundOrder = system.getDataBase().findOrderById(in.nextInt());
 
         } catch (OrderNotFoundException e) {
             e.printStackTrace();
         }
-        return parent;
+        return modifyOrderMenu;
     }
 
     public Order getFoundOrder() {
         return foundOrder;
     }
 }
-//    Z tym static w ModfiyOrder to nie jest dobry pomysł, spróbuj zrobić
-//        tak, żeby znajdowane było zamówienie, a potem przekazywane do
+//        znajdowane było zamówienie, a potem przekazywane do
 //        kolejnego menu. Mniej wiecej tak bym proponował: FindOrderMenu robi to
 //        co aktualnie ModifyOrder i zawiera ModifyOrderMenu, któremu jest
 //        ustawiane znalezione zamóweienie i które jest zwracane z process.

@@ -7,9 +7,9 @@ public class Message extends SystemComponent {
     private String message;
     private Date date;
 
-    public Message() {
+    public Message(String message) {
         this.sender = system.getLoggedUser();
-        this.message = null;
+        this.message = message;
         this.date = date;
     }
 
