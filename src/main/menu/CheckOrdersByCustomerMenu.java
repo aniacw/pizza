@@ -17,7 +17,8 @@ public class CheckOrdersByCustomerMenu extends CheckOrders {
         String fullName = scanner.next();
 
         try {
-            system.getDataBase().findOrderByCustomer(fullName);
+            Order found = system.getDataBase().findOrderByCustomer(fullName);
+            System.out.println(found);
         } catch (UserNotFoundException e) {
             e.printStackTrace();
         }

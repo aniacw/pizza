@@ -45,4 +45,8 @@ public class Pizza extends SystemComponent {
             if (top.equals(t))
                 toppings.remove(top);
     }
+
+    public void addTopping(String t) {
+        toppings.add(t);
+    }
 }

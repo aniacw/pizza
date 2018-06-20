@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class SendMessageMenu extends Menu {
 
     public SendMessageMenu() {
-        super("Send message");
+        super("send message");
     }
 
     @Override

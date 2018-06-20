@@ -34,11 +34,6 @@ public class FindOrderMenu extends Menu {
         return foundOrder;
     }
 }
-//        znajdowane było zamówienie, a potem przekazywane do
-//        kolejnego menu. Mniej wiecej tak bym proponował: FindOrderMenu robi to
-//        co aktualnie ModifyOrder i zawiera ModifyOrderMenu, któremu jest
-//        ustawiane znalezione zamóweienie i które jest zwracane z process.
-//        ModifyOrderMenu może działać jak zwykłe menu wybierania opcji tylko
-//        mieć referencję na pizzę którą aktualnie wybraliśmy.
+
 
 

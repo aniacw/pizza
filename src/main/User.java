@@ -2,6 +2,7 @@ package main;
 
 import main.menu.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User extends SystemComponent {
@@ -19,6 +20,7 @@ public class User extends SystemComponent {
         this.login = login;
         this.password = password;
         this.menu = menu;
+        this.messages = new ArrayList<>();
     }
 
     private static final Menu ADMIN_MENU =
@@ -28,14 +30,16 @@ public class User extends SystemComponent {
                     new SendMessageMenu(),
                     new ChangeUserAccessMenu(),
                     new CreateAccountMenu(),
-                    //new ExecuteOrderMenu(),
+                    new ExecuteOrderMenu(),
                     new ChangePasswordMenu(),
                     new CancelOrderMenu(),
-                  //  new ChangeSizeMenu(),
+                    new ChangeSizeMenu(),
                     new CheckOrders(),
                     new EditContactDataMenu(),
                     new PizzaSelectionMenu(),
-                    new PizzaCreatorMenu()
+                    new PizzaCreatorMenu(),
+                    new DisplayMessageMenu(),
+                    new FindOrderMenu()
             );
 
     private static final Menu CUSTOMER_MENU =
@@ -44,10 +48,10 @@ public class User extends SystemComponent {
                     new CancelOrderMenu(),
                     new EditContactDataMenu(),
                     new ChangePasswordMenu(),
-                  //  new ChangeSizeMenu(),
-//                    new ModifyOrderMenu(),
                     new PizzaCreatorMenu(),
-                    new PizzaSelectionMenu()
+                    new PizzaSelectionMenu(),
+                    new DisplayMessageMenu(),
+                    new FindOrderMenu()
             );
 
     private static final Menu EMPLOYEE_MENU =
@@ -55,9 +59,11 @@ public class User extends SystemComponent {
                     new SendMessageMenu(),
                     new CheckOrders(),
                     new ChangePasswordMenu(),
-                    new CheckOrders(),
-                    new EditContactDataMenu()
-//                    new ExecuteOrderMenu()
+                    new EditContactDataMenu(),
+                    new DisplayMessageMenu(),
+                    new PizzaCreatorMenu(),
+                    new PizzaSelectionMenu(),
+                    new FindOrderMenu()
             );
 
     public static User createAdmin(String login, String password) {
@@ -105,7 +111,9 @@ public class User extends SystemComponent {
         messages.add(m);
     }
 
-    public void receiveMessage(){}
+    public void readMessage(){
+        System.out.println(this.messages);
+    }
 
     public void setMenu(Menu menu) {
         this.menu = menu;

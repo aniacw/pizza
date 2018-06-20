@@ -1,7 +1,5 @@
 package main.menu;
 
-import main.Order;
-
 import java.util.Scanner;
 
 public class CheckOrders extends Menu {
@@ -16,10 +14,11 @@ public class CheckOrders extends Menu {
 
     @Override
     public Menu process() {
-        System.out.println("Select ");
+        System.out.println("Select one option");
+        displayMenu();
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
-        displayMenu();
+
         return parent;
     }
 }

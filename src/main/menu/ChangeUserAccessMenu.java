@@ -1,6 +1,5 @@
 package main.menu;
 
-import main.Order;
 import main.User;
 import main.exception.UserNotFoundException;
 

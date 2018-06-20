@@ -2,6 +2,7 @@ package main.menu;
 
 import main.Order;
 import main.Pizza;
+import main.PizzaSystem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ public class PizzaSelectionMenu extends Menu {
     public PizzaSelectionMenu() {
         super("Order pizza");
         pizzaCreator = new PizzaCreatorMenu();
-        pizzas = system.getDataBase().getRestaurantMenu().getPizzas();
+       // pizzas = system.getDataBase().getRestaurantMenu().getPizzas();
     }
 
     public PizzaSelectionMenu(String name) {
@@ -50,8 +51,10 @@ public class PizzaSelectionMenu extends Menu {
             currentOrder.add(pizzas.get(selectedMenu));
 
             Order o = new Order(currentOrder, system.getLoggedUser());
+          //  system.getDataBase().getOrders().add(o);
 
             System.out.println("Would you like to order another one? Type '1' for yes or '2' for no");
+            selectedMenu = scanner.nextInt();
             if (selectedMenu == 1) {
                 displayMenu();
 
@@ -71,5 +74,11 @@ public class PizzaSelectionMenu extends Menu {
                 return parent;
         }
         return parent;
+    }
+
+    @Override
+    public void setSystem(PizzaSystem system) {
+        super.setSystem(system);
+        pizzas = system.getDataBase().getRestaurantMenu().getPizzas();
     }
 }

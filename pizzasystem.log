@@ -65,3 +65,158 @@ Jun 15, 2018 9:51:18 PM main.menu.RemoveUserMenu process
 INFO: main.User '0' not found
 Jun 15, 2018 10:00:01 PM main.menu.RemoveUserMenu process
 INFO: main.User '0' not found
+Jun 17, 2018 2:04:13 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:33)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:04:20 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:33)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:04:29 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:33)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:05:21 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:33)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:06:24 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:33)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:06:37 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:33)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:07:04 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:33)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:07:12 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:33)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:19:26 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:32)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:19:29 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:32)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:19:37 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:32)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:19:40 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:32)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 2:19:49 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:32)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 17, 2018 10:34:25 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:32)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:17)
+	at main.User.<clinit>(User.java:24)
+	... 1 more
+
+Jun 19, 2018 10:48:56 PM main.SystemLogger log
+SEVERE: java.lang.NullPointerException
+	at main.Message.<init>(Message.java:11)
+	at main.menu.SendMessageMenu.process(SendMessageMenu.java:24)
+	at main.menu.Menu.run(Menu.java:52)
+	at main.User.showInterface(User.java:115)
+	at main.menu.LoginMenu.process(LoginMenu.java:23)
+	at main.menu.Menu.run(Menu.java:52)
+	at main.PizzaSystem.run(PizzaSystem.java:89)
+	at main.Program.main(Program.java:35)
+
+Jun 19, 2018 10:53:51 PM main.SystemLogger log
+SEVERE: java.lang.NullPointerException
+	at main.Message.<init>(Message.java:11)
+	at main.menu.SendMessageMenu.process(SendMessageMenu.java:24)
+	at main.menu.Menu.run(Menu.java:52)
+	at main.User.showInterface(User.java:122)
+	at main.menu.LoginMenu.process(LoginMenu.java:23)
+	at main.menu.Menu.run(Menu.java:52)
+	at main.PizzaSystem.run(PizzaSystem.java:89)
+	at main.Program.main(Program.java:36)
+
+Jun 19, 2018 10:55:31 PM main.SystemLogger log
+SEVERE: java.lang.NullPointerException
+	at main.menu.PizzaCreatorMenu.process(PizzaCreatorMenu.java:16)
+	at main.menu.Menu.run(Menu.java:52)
+	at main.User.showInterface(User.java:122)
+	at main.menu.LoginMenu.process(LoginMenu.java:23)
+	at main.menu.Menu.run(Menu.java:52)
+	at main.PizzaSystem.run(PizzaSystem.java:89)
+	at main.Program.main(Program.java:36)
+
+Jun 20, 2018 11:07:56 PM main.SystemLogger log
+SEVERE: java.lang.NullPointerException
+	at main.Message.<init>(Message.java:11)
+	at main.menu.SendMessageMenu.process(SendMessageMenu.java:24)
+	at main.menu.Menu.run(Menu.java:52)
+	at main.User.showInterface(User.java:122)
+	at main.menu.LoginMenu.process(LoginMenu.java:23)
+	at main.menu.Menu.run(Menu.java:52)
+	at main.PizzaSystem.run(PizzaSystem.java:89)
+	at main.Program.main(Program.java:36)
+

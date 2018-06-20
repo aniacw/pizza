@@ -36,7 +36,18 @@ public class DataBase extends SystemComponent {
         throw new UserNotFoundException(fullName);
     }
 
+    public Order findOrderByDate(String date) throws OrderNotFoundException {
+        for (Order o : orders)
+            if (o.getOrderDate().equals(date))
+                return o;
+        throw new OrderNotFoundException();
+    }
+
     public RestaurantMenu getRestaurantMenu() {
         return restaurantMenu;
+    }
+
+    public List<Order> getArchivedOrders() {
+        return archivedOrders;
     }
 }

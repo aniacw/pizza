@@ -1,14 +1,17 @@
 package main;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 public class Order extends SystemComponent {
 
+    public static final DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
     private static int lastId = 0;
     private int id;
-    //wiecej pizz
     private List<Pizza> pizza;
     private User customer;
     private float summaryPrice;
@@ -19,7 +22,7 @@ public class Order extends SystemComponent {
         this.id = lastId++;
         this.pizza = new ArrayList<>();
         this.customer = customer;
-        //this.orderDate = toda
+        this.orderDate = Calendar.getInstance().getTime();
     }
 
     public int getId() {
@@ -38,8 +41,7 @@ public class Order extends SystemComponent {
         return customer;
     }
 
-    public void editPizza(int newTopping){
-
-
+    public Date getOrderDate() {
+        return orderDate;
     }
 }

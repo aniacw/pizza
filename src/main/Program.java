@@ -1,5 +1,6 @@
 package main;
 
+import main.menu.DisplayMessageMenu;
 import main.menu.LoginMenu;
 import main.menu.Menu;
 
@@ -24,7 +25,6 @@ public class Program {
 //        for (String s : numStrings)
 //            numbers.add(Integer.parseInt(s));
 
-
             Menu mainMenu = new Menu("Pizza Order System",
                     new LoginMenu()
             );
@@ -39,7 +39,5 @@ public class Program {
         catch(Throwable t){
             system.getLogger().log(t);
         }
-
-        system.getDataBase().getRestaurantMenu().showRestaurantMenu();
     }
 }
