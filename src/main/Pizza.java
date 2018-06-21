@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Pizza extends SystemComponent {
+public class Pizza  {
     private String name;
     private List<String> toppings;
     private String size;
@@ -14,14 +14,16 @@ public class Pizza extends SystemComponent {
 
     // private static HashMap<String, Pizza>
 
-    public Pizza() {
+    public Pizza(String name) {
+        this.name = name;
         this.size = size;
         this.splitHalf = splitHalf;
         this.takeAway = takeAway;
         this.price = price;
     }
 
-    public Pizza(List<String> toppings, String size) {
+    public Pizza(String name, List<String> toppings, String size) {
+        this.name = name;
         this.toppings = new ArrayList<>();
         this.size = size;
         this.splitHalf = false;

@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.PizzaSystem;
 import main.exception.UserNotFoundException;
 import main.Message;
 import main.User;
@@ -18,7 +19,7 @@ public class SendMessageMenu extends Menu {
             System.out.println("Please type the receiver's login");
             Scanner scanner = new Scanner(System.in);
             String login = scanner.next();
-            User user = system.findUserByLogin(login);
+            User user = PizzaSystem.getInstance().findUserByLogin(login);
             System.out.println("Please type the message");
             String msg = scanner.next();
             user.addMessage(new Message(msg));

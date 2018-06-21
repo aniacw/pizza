@@ -1,6 +1,7 @@
 package main.menu;
 
 import main.Order;
+import main.PizzaSystem;
 import main.exception.UserNotFoundException;
 
 import java.util.Scanner;
@@ -17,7 +18,7 @@ public class CheckOrdersByCustomerMenu extends CheckOrders {
         String fullName = scanner.next();
 
         try {
-            Order found = system.getDataBase().findOrderByCustomer(fullName);
+            Order found = PizzaSystem.getInstance().getDataBase().findOrderByCustomer(fullName);
             System.out.println(found);
         } catch (UserNotFoundException e) {
             e.printStackTrace();

@@ -1,5 +1,7 @@
 package main.menu;
 
+import main.PizzaSystem;
+
 public class DisplayMessageMenu extends Menu {
 
     public DisplayMessageMenu(){
@@ -8,7 +10,7 @@ public class DisplayMessageMenu extends Menu {
 
     @Override
     public Menu process(){
-        system.getLoggedUser().readMessage();
+        PizzaSystem.getInstance().getLoggedUser().printMessages();
         return parent;
     }
 }

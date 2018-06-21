@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.PizzaSystem;
 import main.User;
 import main.exception.UserNotFoundException;
 
@@ -15,7 +16,7 @@ public class ChangeUserAccessMenu extends Menu {
         System.out.println("Please type login to be changed to admin");
         Scanner in = new Scanner(System.in);
         try {
-            User userToChange = system.findUserByLogin(in.next());
+            User userToChange = PizzaSystem.getInstance().findUserByLogin(in.next());
             userToChange.setAdminRights();
             System.out.println(userToChange + " is now admin");
         } catch (UserNotFoundException e) {

@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.PizzaSystem;
 import main.User;
 
 import java.util.Scanner;
@@ -16,7 +17,7 @@ public class LoginMenu extends Menu {
         String login = scanner.next();
         System.out.println("Password: ");
         String password = scanner.next();
-        User u = system.logIn(login, password);
+        User u = PizzaSystem.getInstance().logIn(login, password);
         if (u == null)
             System.out.println("Invalid login or password");
         else

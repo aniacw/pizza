@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.PizzaSystem;
 import main.exception.UserNotFoundException;
 
 import java.util.Scanner;
@@ -17,11 +18,11 @@ public class RemoveUserMenu extends Menu {
             System.out.println("Please type the login to be removed");
             Scanner in = new Scanner(System.in);
             String loginToRemove = in.next();
-            system.removeUserByLogin(loginToRemove);
+            PizzaSystem.getInstance().removeUserByLogin(loginToRemove);
             System.out.println("User '" + loginToRemove +"' removed");
         } catch (UserNotFoundException e) {
             System.out.println("User not found");
-            system.getLogger().log(Level.INFO, e.getMessage());
+            PizzaSystem.getInstance().getLogger().log(Level.INFO, e.getMessage());
         }
         return parent;
     }

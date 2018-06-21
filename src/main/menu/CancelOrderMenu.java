@@ -1,6 +1,7 @@
 package main.menu;
 
 import main.Order;
+import main.PizzaSystem;
 
 import java.util.Scanner;
 import java.util.function.Predicate;
@@ -29,7 +30,7 @@ public class CancelOrderMenu extends Menu {
         Scanner scanner = new Scanner(System.in);
         int idToCancel = scanner.nextInt();
 
-        if (system.getDataBase().getOrders().removeIf(i -> i.getId() == idToCancel))
+        if (PizzaSystem.getInstance().getDataBase().getOrders().removeIf(i -> i.getId() == idToCancel))
             System.out.println("order no " + idToCancel + " cancelled");
         else
             System.out.println("order no " + idToCancel + " not found");

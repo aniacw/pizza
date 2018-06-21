@@ -5,7 +5,7 @@ import main.menu.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User extends SystemComponent {
+public class User  {
     private String fullName;
     private String login;
     private String password;
@@ -111,7 +111,7 @@ public class User extends SystemComponent {
         messages.add(m);
     }
 
-    public void readMessage(){
+    public void printMessages(){
         System.out.println(this.messages);
     }
 
@@ -121,11 +121,5 @@ public class User extends SystemComponent {
 
     public void showInterface(){
         menu.run();
-    }
-
-    @Override
-    public void setSystem(PizzaSystem system) {
-        super.setSystem(system);
-        menu.setSystem(system);
     }
 }

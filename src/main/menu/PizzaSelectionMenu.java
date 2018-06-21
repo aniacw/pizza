@@ -15,13 +15,13 @@ public class PizzaSelectionMenu extends Menu {
     public PizzaSelectionMenu() {
         super("Order pizza");
         pizzaCreator = new PizzaCreatorMenu();
-       // pizzas = system.getDataBase().getRestaurantMenu().getPizzas();
+        pizzas = PizzaSystem.getInstance().getDataBase().getRestaurantMenu().getPizzas();
     }
 
     public PizzaSelectionMenu(String name) {
         super(name);
         pizzaCreator = new PizzaCreatorMenu();
-        pizzas = system.getDataBase().getRestaurantMenu().getPizzas();
+        pizzas = PizzaSystem.getInstance().getDataBase().getRestaurantMenu().getPizzas();
     }
 
     @Override
@@ -50,8 +50,8 @@ public class PizzaSelectionMenu extends Menu {
             List<Pizza> currentOrder = new ArrayList<>();
             currentOrder.add(pizzas.get(selectedMenu));
 
-            Order o = new Order(currentOrder, system.getLoggedUser());
-          //  system.getDataBase().getOrders().add(o);
+            Order o = new Order(currentOrder, PizzaSystem.getInstance().getLoggedUser());
+          //  PizzaSystem.getInstance().getDataBase().getOrders().add(o);
 
             System.out.println("Would you like to order another one? Type '1' for yes or '2' for no");
             selectedMenu = scanner.nextInt();
@@ -76,9 +76,9 @@ public class PizzaSelectionMenu extends Menu {
         return parent;
     }
 
-    @Override
-    public void setSystem(PizzaSystem system) {
-        super.setSystem(system);
-        pizzas = system.getDataBase().getRestaurantMenu().getPizzas();
-    }
+//    @Override
+//    public void setSystem(PizzaSystem PizzaSystem.getInstance()) {
+//        super.setSystem(PizzaSystem.getInstance());
+//        pizzas = PizzaSystem.getInstance().getDataBase().getRestaurantMenu().getPizzas();
+//    }
 }

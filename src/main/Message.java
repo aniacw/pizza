@@ -1,24 +1,23 @@
 package main;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
-public class Message extends SystemComponent {
+public class Message  {
     private User sender;
     private String message;
     private Date date;
 
     public Message(String message) {
-        this.sender = system.getLoggedUser();
+        this.sender = PizzaSystem.getInstance().getLoggedUser();
         this.message = message;
-        this.date = date;
+        this.date = new Date();
     }
 
     @Override
     public String toString() {
-        return "main.Message{" +
-                "sender='" + sender + '\'' +
+        return  "sender='" + sender.getLogin() + '\'' +
                 ", message='" + message + '\'' +
-                ", date=" + date +
-                '}';
+                ", date=" + date;
     }
 }

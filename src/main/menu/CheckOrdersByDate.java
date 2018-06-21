@@ -30,7 +30,7 @@ public class CheckOrdersByDate extends CheckOrders {
         System.out.println("Please type the date");
         Scanner scanner = new Scanner(System.in);
         Date date = readDate(scanner);
-       // system.getDataBase().findOrderByDate(date);
+       // PizzaSystem.getInstance().getDataBase().findOrderByDate(date);
         return parent;
     }
 }

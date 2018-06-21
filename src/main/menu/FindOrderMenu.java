@@ -1,6 +1,7 @@
 package main.menu;
 
 import main.Order;
+import main.PizzaSystem;
 import main.exception.OrderNotFoundException;
 
 import java.util.Scanner;
@@ -22,7 +23,7 @@ public class FindOrderMenu extends Menu {
         try {
             System.out.println("Please type order id to change");
             Scanner in = new Scanner(System.in);
-            foundOrder = system.getDataBase().findOrderById(in.nextInt());
+            foundOrder = PizzaSystem.getInstance().getDataBase().findOrderById(in.nextInt());
 
         } catch (OrderNotFoundException e) {
             e.printStackTrace();

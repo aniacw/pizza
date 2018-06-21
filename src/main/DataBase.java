@@ -6,7 +6,7 @@ import main.exception.UserNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataBase extends SystemComponent {
+public class DataBase  {
     private List<Order> orders;
     private List<Order> archivedOrders;
     private RestaurantMenu restaurantMenu;

@@ -1,5 +1,7 @@
 package main.menu;
 
+import main.PizzaSystem;
+
 import java.util.Scanner;
 
 public class ChangePasswordMenu extends Menu {
@@ -16,7 +18,7 @@ public class ChangePasswordMenu extends Menu {
         String newPassword = scanner.next();
 
         try {
-            system.getLoggedUser().changePassword(oldPassword, newPassword);
+            PizzaSystem.getInstance().getLoggedUser().changePassword(oldPassword, newPassword);
         } catch (Exception e) {
             e.printStackTrace();
         }

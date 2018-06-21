@@ -1,5 +1,7 @@
 package main.menu;
 
+import main.PizzaSystem;
+
 import java.util.Scanner;
 
 public class ExecuteOrderMenu extends Menu {
@@ -13,8 +15,8 @@ public class ExecuteOrderMenu extends Menu {
         System.out.println("Please type order id to execute");
         Scanner scanner = new Scanner(System.in);
         int o = scanner.nextInt();
-        system.getDataBase().getArchivedOrders().add(system.getDataBase().getOrders().get(o));
-        system.getDataBase().getOrders().remove(o);
+        PizzaSystem.getInstance().getDataBase().getArchivedOrders().add(PizzaSystem.getInstance().getDataBase().getOrders().get(o));
+        PizzaSystem.getInstance().getDataBase().getOrders().remove(o);
         return parent;
     }
 }

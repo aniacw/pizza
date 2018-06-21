@@ -1,12 +1,11 @@
 package main.menu;
 
 import main.PizzaSystem;
-import main.SystemComponent;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Menu extends SystemComponent {
+public class Menu  {
 
     protected Menu parent;
     protected String name;
@@ -50,13 +49,6 @@ public class Menu extends SystemComponent {
         Menu current = this;
         while (current != null)
             current = current.process();
-    }
-
-    @Override
-    public void setSystem(PizzaSystem system) {
-        super.setSystem(system);
-        for (Menu m : submenu)
-            m.setSystem(system);
     }
 }
 

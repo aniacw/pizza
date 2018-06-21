@@ -16,9 +16,9 @@ public class Program {
 
 
     public static void main(String[] args) {
-        PizzaSystem system = new PizzaSystem();
+        PizzaSystem system = PizzaSystem.getInstance();
         try {
-//        Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
 //        String line = scanner.nextLine();
 //        String[] numStrings = line.split(" ");
 //        ArrayList<Integer> numbers = new ArrayList<>();
@@ -28,6 +28,8 @@ public class Program {
             Menu mainMenu = new Menu("Pizza Order System",
                     new LoginMenu()
             );
+
+
 
             system.setMainMenu(mainMenu);
             system.addUser(User.createAdmin("Clark", "7777"));

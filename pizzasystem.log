@@ -220,3 +220,11 @@ SEVERE: java.lang.NullPointerException
 	at main.PizzaSystem.run(PizzaSystem.java:89)
 	at main.Program.main(Program.java:36)
 
+Jun 21, 2018 5:10:22 PM main.SystemLogger log
+SEVERE: java.lang.ExceptionInInitializerError
+	at main.Program.main(Program.java:33)
+Caused by: java.lang.NullPointerException
+	at main.menu.PizzaSelectionMenu.<init>(PizzaSelectionMenu.java:18)
+	at main.User.<clinit>(User.java:26)
+	... 1 more
+

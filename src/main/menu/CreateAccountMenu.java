@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.PizzaSystem;
 import main.User;
 
 import java.util.Scanner;
@@ -32,7 +33,7 @@ public class CreateAccountMenu extends Menu {
             System.out.println("Invalid user role");
             return parent;
         }
-        system.addUser(user);
+        PizzaSystem.getInstance().addUser(user);
         return parent;
     }
 }

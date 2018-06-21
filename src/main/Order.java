@@ -7,7 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class Order extends SystemComponent {
+public class Order  {
 
     public static final DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
     private static int lastId = 0;

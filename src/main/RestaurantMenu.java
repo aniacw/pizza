@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class RestaurantMenu extends SystemComponent {
+public class RestaurantMenu  {
 
     private ArrayList<Pizza> pizzas;
     private ArrayList<String> toppings;
 
     private String pizzaList;
 
-    Pizza margherita = new Pizza(Arrays.asList("cheese", "tomato"), "medium");
-    Pizza carbonara = new Pizza(Arrays.asList("beacon", "cream", "tomato"), "medium");
-    Pizza vegetarian = new Pizza(Arrays.asList("tomato", "sweetcorn", "broccoli"), "medium");
-    Pizza caprese = new Pizza(Arrays.asList("mozzarella", "basil", "tomato"), "medium");
-    Pizza pepperoni = new Pizza(Arrays.asList("pepperoni", "mushroom", "tomato"), "medium");
+    Pizza margherita = new Pizza("margherita", Arrays.asList("cheese", "tomato"), "medium");
+    Pizza carbonara = new Pizza("cabonara", Arrays.asList("beacon", "cream", "tomato"), "medium");
+    Pizza vegetarian = new Pizza("vegetarian", Arrays.asList("tomato", "sweetcorn", "broccoli"), "medium");
+    Pizza caprese = new Pizza("caprese", Arrays.asList("mozzarella", "basil", "tomato"), "medium");
+    Pizza pepperoni = new Pizza("pepperoni", Arrays.asList("pepperoni", "mushroom", "tomato"), "medium");
 
     public RestaurantMenu() {
         this.pizzas = new ArrayList<>(Arrays.asList(margherita, caprese, carbonara, vegetarian, pepperoni));

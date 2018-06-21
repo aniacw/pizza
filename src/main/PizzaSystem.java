@@ -12,18 +12,23 @@ import java.util.List;
 import java.util.logging.*;
 
 public class PizzaSystem {
+    private static PizzaSystem instance = new PizzaSystem();
     private User loggedUser;
     private List<User> users;
     private Menu menu;
     private DataBase dataBase;
     private SystemLogger logger;
 
-    public PizzaSystem() {
+    public static PizzaSystem getInstance(){
+        return instance;
+    }
+
+    private PizzaSystem() {
         this.dataBase = new DataBase();
         this.loggedUser = null;
         this.users = new ArrayList<>();
-        dataBase.setSystem(this);
-        this.logger = new SystemLogger("pizzasystem.log", true);
+        //dataBase.setSystem(this);
+        this.logger = new SystemLogger("pizzaPizzaSystem.getInstance().log", true);
     }
 
     public SystemLogger getLogger() {
@@ -66,7 +71,6 @@ public class PizzaSystem {
 
     public void addUser(User user) {
         users.add(user);
-        user.setSystem(this);
     }
 
     public void removeUser(User user) throws UserNotFoundException {
@@ -82,7 +86,6 @@ public class PizzaSystem {
 
     public void setMainMenu(Menu mainMenu){
         this.menu = mainMenu;
-        mainMenu.setSystem(this);
     }
 
     public void run(){
